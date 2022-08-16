@@ -107,7 +107,7 @@ module.exports = ({ strapi }) => {
       const tokensService = strapi.query("plugin::passwordless.token");
       return tokensService.update({
         where: { id: token.id },
-        data: { is_active: false, login_date: new Date() },
+        data: { is_active: true, login_date: new Date() },
       });
     },
 
