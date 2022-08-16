@@ -99,7 +99,7 @@ module.exports = ({ strapi }) => {
       const tokenInfo = {
         email,
         body,
-        context: JSON.parse(JSON.stringify(context)),
+        context: JSON.stringify(context),
       };
       return tokensService.create({ data: tokenInfo });
     },

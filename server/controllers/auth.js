@@ -66,7 +66,7 @@ module.exports = {
 
     let context;
     try {
-      context = JSON.parse(token.context);
+      context = JSON.parse(JSON.stringify(token.context));
     } catch (e) {
       context = {};
     }
